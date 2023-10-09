@@ -1,0 +1,34 @@
+/*body*/
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: $color-uno;
+  background-color: $color-tres;
+  letter-spacing: 0.03em;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.list {
+  list-style-type: none;
+  display: flex;
+}
+
+.link {
+  text-decoration: none;
+
+  &:focus-within,
+  &:focus-visible,
+  &:focus,
+  &:active {
+    outline: none;
+    transition: transform 0.25ms $cubic;
+    cursor: pointer;
+  }
+}

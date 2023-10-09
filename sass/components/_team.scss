@@ -1,0 +1,114 @@
+/* --equipo-- */
+.team {
+  padding-top: 94px;
+  color: $color-dos;
+  height: 648px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.18;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: $color-cuatro;
+
+  &__title {
+    height: 42px;
+    text-align: center;
+    font-style: normal;
+    margin-bottom: 50px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.171;
+    letter-spacing: 0.03em;
+    color: $color-dos;
+  }
+
+  &__list {
+    flex-grow: 1;
+    column-gap: 37px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 94px;
+    align-items: center;
+  }
+}
+
+.team__item {
+  width: 270px;
+  height: 428px;
+  margin-top: 0;
+  gap: 30px;
+  background: $color-tres;
+  box-shadow: $box-shadow6, $box-shadow7, $box-shadow8;
+  border-radius: 0px 0px 4px 4px;
+  transition: transform 250ms $cubic; /* función escalar imagen */
+
+  /* Imagen escalada - trae al frente */
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.team__name {
+  font-size: 16px;
+  color: $color-dos;
+  font-weight: 500;
+  line-height: 1.1718;
+  letter-spacing: 0.03em;
+  font-style: normal;
+  text-align: center;
+}
+
+.team__profession {
+  font-size: 16px;
+  color: $color-uno;
+  font-weight: 400;
+  line-height: 1.1718;
+  margin-bottom: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.team__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  &--social {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &--image {
+    display: flex;
+    color: $icon-color;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    transition: color 250ms $cubic;
+
+    &:hover,
+    &:focus {
+      background-color: $color-studio;
+      border-radius: 50%;
+      color: $color-tres;
+    }
+  }
+}
+
+.team__link--icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}

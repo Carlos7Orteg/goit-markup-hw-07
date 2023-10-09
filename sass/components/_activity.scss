@@ -1,0 +1,55 @@
+/*Areas de Desarrollo*/
+.activity {
+  padding-top: 94px;
+  height: 425px;
+  color: $color-dos;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  justify-content: space-between;
+  top: 991px;
+  left: 215px;
+  margin-bottom: 94px;
+
+  &__title {
+    font-size: 36px;
+    line-height: 1.171;
+    letter-spacing: 0.03em;
+    color: $color-dos;
+    font-style: normal;
+    text-align: center;
+    padding-bottom: 55.05px;
+    margin: auto;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    justify-content: center;
+    height: 648px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+}
+
+.activity__card {
+  position: relative;
+
+  &--heading {
+    text-transform: uppercase;
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.172;
+    letter-spacing: 0.03em;
+    color: $color-tres;
+    bottom: -11px;
+    background-color: $color-background-card;
+    padding: 27px;
+    width: 316px;
+  }
+}

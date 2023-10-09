@@ -1,0 +1,75 @@
+/*Tittle*/
+.hero.container {
+  background: $color-background;
+}
+
+.hero {
+  background: $color-background;
+  text-align: center;
+  top: 80px;
+  left: -4px;
+  box-shadow: $box-shadow4;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  &.hero__image {
+    max-width: 1600px;
+    max-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-image: linear-gradient(to right, $color-banner-background, $color-banner-background),
+      url(../images/banner.jpg);
+  }
+
+  &__title {
+    width: 696px;
+    height: 120px;
+    margin: 0 auto;
+    font-weight: 900;
+    font-size: 44px;
+    font-style: normal;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $color-tres;
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+
+/*button About*/
+.hero__btn {
+  height: 50px;
+  font-family: inherit;
+  font-style: normal;
+  margin-left: 475px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.87;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: $color-tres;
+  background: $color-studio;
+  box-shadow: $box-shadow5;
+  gap: 10px;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  justify-content: center;
+  transition: background-color 250ms $cubic;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: $click-order;
+    box-shadow: $box-shadow5;
+  }
+}

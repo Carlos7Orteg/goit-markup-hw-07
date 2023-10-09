@@ -1,0 +1,60 @@
+/* --About-- */
+.develop {
+  padding: 0px;
+  padding-top: 95px;
+  margin-left: 50px;
+  column-gap: 30px;
+
+  &__title {
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $color-dos;
+    margin: 0 auto;
+  }
+
+  &__block {
+    height: 272px;
+    margin-top: 775px;
+    margin-left: 205px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    position: relative;
+    left: -40px;
+
+    > .develop__item {
+      flex-basis: calc((100% - 3 * 30px) / 4);
+    }
+  }
+}
+
+.develop__item {
+  width: 270px;
+  padding: 0;
+}
+
+.develop__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-cuatro;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+}
+
+.develop__icons {
+  width: 70px;
+  height: 70px;
+}
+
+.develop__text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $color-uno;
+  width: 270px;
+  margin: auto;
+}
