@@ -47,109 +47,109 @@
       color: $color-tres;
       cursor: pointer;
     }
-  }
-}
 
-.webfolio__list--project {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-  padding-bottom: 94px;
-  gap: 30px;
-
-  .webfolio__item {
-    background: var(--color-tres);
-    border: 1px solid $color-project;
-    border-bottom: 3px solid $color-project;
-    width: 370px;
-    height: 404px;
-    border: 1px solid $color-project;
-    margin: auto;
-    padding: 0;
-    transition: color 250ms $cubic;
-
-    &:hover,
-    &:focus {
-      box-shadow: $box-shadow9, $box-shadow10, $box-shadow11;
+    & &--current {
+      font-style: normal;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.62;
+      text-align: center;
+      border-radius: 4px;
+      color: $color-tres;
+      background-color: $color-studio;
       cursor: pointer;
+      transition: color 250ms $cubic;
+
+      &:hover,
+      &:focus {
+        background-color: $color-studio;
+        color: $color-tres;
+      }
     }
   }
 
-  .webfolio__link {
-    position: relative;
-    overflow: hidden;
+  &__item {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    padding-bottom: 94px;
+    gap: 30px;
+
+    &-project {
+      background: var(--color-tres);
+      border: 1px solid $color-project;
+      border-bottom: 3px solid $color-project;
+      width: 370px;
+      height: 404px;
+      border: 1px solid $color-project;
+      margin: auto;
+      padding: 0;
+      transition: color 250ms $cubic;
+
+      &:hover,
+      &:focus {
+        box-shadow: $box-shadow9, $box-shadow10, $box-shadow11;
+        cursor: pointer;
+      }
+    }
   }
 }
 
-.webfolio__item:hover .webfolio__link--text {
+.webfolio__link {
+  position: relative;
+  overflow: hidden;
+
+  &-text {
+    box-sizing: border-box;
+    transform: translateY(0);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $color-tres;
+    background-color: $color-img-background;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    letter-spacing: 0.03em;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 63px 24px;
+  }
+
+  &-name {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 24px;
+    margin-right: 24px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    color: $color-dos;
+    letter-spacing: 0.06em;
+  }
+
+  &-description {
+    font-style: normal;
+    margin-left: 24px;
+    margin-right: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+    color: $color-uno;
+  }
+}
+
+.webfolio__item-project:hover .webfolio__link-text {
   display: block;
   transform: translateY(-100%);
   transition: transform 250ms $cubic;
-}
-
-.webfolio__link--text {
-  box-sizing: border-box;
-  transform: translateY(0);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  margin: 0;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: $color-tres;
-  background-color: $color-img-background;
-  font-family: 'Roboto', sans-serif;
-  text-align: left;
-  letter-spacing: 0.03em;
-  font-size: 18px;
-  line-height: 1.5;
-  padding: 63px 24px;
-}
-
-.webfolio__link--name {
-  font-family: 'Roboto', sans-serif;
-  margin-left: 24px;
-  margin-right: 24px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  color: $color-dos;
-  letter-spacing: 0.06em;
-}
-
-.webfolio__link--description {
-  font-style: normal;
-  margin-left: 24px;
-  margin-right: 24px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.03em;
-  color: $color-uno;
-}
-
-.webfolio__button .webfolio__button--current {
-  font-style: normal;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.62;
-  text-align: center;
-  border-radius: 4px;
-  color: $color-tres;
-  background-color: $color-studio;
-  cursor: pointer;
-  transition: color 250ms $cubic;
-
-  &:hover,
-  &:focus {
-    background-color: $color-studio;
-    color: $color-tres;
-  }
 }

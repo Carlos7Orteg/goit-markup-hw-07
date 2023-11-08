@@ -2,6 +2,7 @@
 .footer {
   height: 252px;
   background: $color-background;
+  font-family: 'Roboto', sans-serif;
 
   &__flex {
     display: flex;
@@ -18,7 +19,7 @@
     margin-right: 70px;
     margin-left: 0;
 
-    &--logo {
+    &-logo {
       font-family: 'Raleway', sans-serif;
       font-size: 26px;
       line-height: 1.1738;
@@ -30,42 +31,50 @@
       margin: 0;
     }
   }
+
+  &__item {
+    list-style: none;
+    font-style: normal;
+    word-wrap: break-word;
+    padding: 0;
+    margin: 0;
+
+    .info {
+      height: 95px;
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1.71;
+      letter-spacing: 0.03em;
+      position: relative;
+      margin: 0;
+      padding: 0;
+    }
+
+    &-contact {
+      display: block;
+      padding-top: 7px;
+    }
+  }
 }
 
-.footer__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.info {
-  height: 95px;
+.footer__link-address {
   font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  position: relative;
-  margin: 0;
-  padding: 0;
-}
-
-.footer__link-button.address {
   color: $color-tres;
   transition: color 250ms $cubic;
+  text-decoration: none;
 }
 
-.footer__link-button.email {
+.footer__link-contact {
+  font-family: 'Roboto', sans-serif;
   color: $color-info-down;
   transition: color 250ms $cubic;
+  text-decoration: none;
 }
 
-.footer__link-button.tel {
-  color: $color-info-down;
-  transition: color 250ms $cubic;
-}
-
-.footer__link-button {
+.footer__link-address,
+.footer__link-contact {
   &:hover,
   &:focus {
     color: $color-studio;
@@ -75,17 +84,6 @@
   &:visited {
     color: $color-dos;
   }
-
-  &.address,
-  &.email,
-  &.tel {
-    text-decoration: none;
-  }
-}
-
-.footer__item-tel {
-  display: block;
-  padding-top: 7px;
 }
 
 /*--social networks--*/
@@ -114,14 +112,14 @@
     padding: 0;
     column-gap: 10px;
   }
-}
 
-.join__item {
-  display: flex;
-  text-decoration: none;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+  &__item {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
 }
 
 .join__link {
@@ -142,7 +140,7 @@
     color: $color-tres;
   }
 
-  &--icon {
+  &-icon {
     width: 20px;
     height: 20px;
     fill: currentColor;
@@ -154,7 +152,7 @@
   display: flex;
   flex-direction: column;
 
-  .subscribe__title {
+  &__title {
     text-transform: uppercase;
     color: $color-tres;
     padding-bottom: 20px;
@@ -168,53 +166,64 @@
     letter-spacing: 0.03em;
     text-align: left;
   }
-}
 
-.subscribe__list {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: relative;
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
 
-  &--input {
-    color: $color-subscribe-input;
-    width: 241px;
-    height: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
-    text-align: left;
-    padding: 15px 101px 15px 16px;
-    outline: none;
-    margin-left: 93px;
-    border-radius: 4px;
-    border: 1px solid $color-border-input;
-    box-shadow: $box-shadow5;
+    &-input {
+      color: $color-subscribe-input;
+      width: 241px;
+      height: 20px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+      text-align: left;
+      padding: 15px 101px 15px 16px;
+      outline: none;
+      margin-left: 93px;
+      border-radius: 4px;
+      border: 1px solid $color-border-input;
+      box-shadow: $box-shadow5;
+      background: $color-background;
+      transition: border-color 250ms $cubic;
+
+      &::placeholder {
+        transition: color 250ms ease, transform 250ms ease;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        border-color: $color-studio;
+        cursor: pointer;
+      }
+    }
+  }
+
+  /* Estilo del label (placeholder) */
+  &__item {
+    position: absolute;
+    top: 50%;
+    right: 429px;
+    transform: translateY(-60%);
+    color: $color-subscribe;
+    pointer-events: none;
+    transition: 250ms $cubic;
     background: $color-background;
-    transition: border-color 250ms $cubic;
+    border-radius: 2px;
+    width: 130px;
+    text-align: center;
   }
 }
 
-/* Estilo del label (placeholder) */
-.subscribe__item {
-  position: absolute;
-  top: 50%;
-  right: 429px;
-  transform: translateY(-60%);
-  color: $color-subscribe;
-  pointer-events: none;
-  transition: 250ms $cubic;
-  background: $color-background;
-  border-radius: 2px;
-  width: 130px;
-  text-align: center;
-}
-
 /* input obtiene valor, ajusta estilo del label */
-.subscribe__list--input:focus + .subscribe__item,
-.subscribe__list--input:valid + .subscribe__item {
+.subscribe__list-input:focus + .subscribe__item,
+.subscribe__list-input:valid + .subscribe__item {
   top: -1px;
   font-size: 12px;
   color: $click-order;
@@ -226,24 +235,13 @@
   transition: 250ms $cubic;
 }
 
-.subscribe__list--input:not(:placeholder-shown) + .subscribe__item {
+.subscribe__list-input:not(:placeholder-shown) + .subscribe__item {
   background: $color-background;
   top: -1px;
   color: $click-order;
   font-size: 12px;
   width: 113px;
   right: 432px;
-}
-
-.subscribe__list--input::placeholder {
-  transition: color 250ms ease, transform 250ms ease;
-}
-
-.subscribe__list--input:hover,
-.subscribe__list--input:focus,
-.subscribe__list--input:active {
-  border-color: $color-studio;
-  cursor: pointer;
 }
 
 .subscribe__link {
@@ -272,16 +270,16 @@
     background-color: $click-order;
     cursor: pointer;
   }
-}
 
-.subscribe__link--icon {
-  position: absolute;
-  top: 50%;
-  left: 143px;
-  transform: translateY(-50%);
-  display: flex;
-  column-gap: 10px;
-  color: $color-tres;
-  background-color: $color-studio;
-  transition: fill 250ms $cubic;
+  &-icon {
+    position: absolute;
+    top: 50%;
+    left: 143px;
+    transform: translateY(-50%);
+    display: flex;
+    column-gap: 10px;
+    color: $color-tres;
+    background-color: $color-studio;
+    transition: fill 250ms $cubic;
+  }
 }

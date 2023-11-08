@@ -7,12 +7,12 @@
   height: 100%;
   background-color: $shadow-backdrop;
   transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
-}
 
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
+  &--is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
 }
 
 .modal {
@@ -45,21 +45,21 @@
       fill: $color-studio;
       cursor: pointer;
     }
-  }
-}
 
-.modal__close--icon {
-  width: 11px;
-  height: 11px;
+    &-icon {
+      width: 11px;
+      height: 11px;
 
-  &:hover {
-    fill: $color-studio;
-    cursor: pointer;
+      &:hover {
+        fill: $color-studio;
+        cursor: pointer;
+      }
+    }
   }
 }
 
 /*?-- Form --*/
-.modal__form--group {
+.modal__form {
   font-family: 'Roboto', sans-serif;
   border: none;
   display: flex;
@@ -67,33 +67,33 @@
   justify-content: center;
   margin: 0;
   padding: 0;
-}
 
-.modal__form--title {
-  width: 448px;
-  margin-top: 38.5px;
-  margin-left: 41px;
-  margin-right: 39px;
-  margin-bottom: 2px;
-  text-align: center;
-  color: $color-dos;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.172;
-  letter-spacing: 0.03em;
-  text-align: center;
-}
+  &-title {
+    width: 448px;
+    margin-top: 38.5px;
+    margin-left: 41px;
+    margin-right: 39px;
+    margin-bottom: 2px;
+    text-align: center;
+    color: $color-dos;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.172;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
 
-.modal__list {
-  margin-top: 10px;
-  margin-left: 41px;
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.71;
-  letter-spacing: 0.01em;
-  text-align: left;
-  color: $color-uno;
+  &-list {
+    margin-top: 10px;
+    margin-left: 41px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: $color-uno;
+  }
 }
 
 .modal__item {
@@ -105,26 +105,26 @@
     fill: $color-studio;
     cursor: pointer;
   }
-}
 
-.modal__item--input {
-  margin-top: 4px;
-  margin-left: 40px;
-  margin-right: 40px;
-  padding-left: 42px;
-  width: 402px;
-  height: 40px;
-  border: 1px solid $color-border-modal;
-  border-radius: 4px;
+  &-input {
+    margin-top: 4px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-left: 42px;
+    width: 402px;
+    height: 40px;
+    border: 1px solid $color-border-modal;
+    border-radius: 4px;
 
-  &:hover,
-  &:focus {
-    border-color: $color-studio;
-    cursor: pointer;
+    &:hover,
+    &:focus {
+      border-color: $color-studio;
+      cursor: pointer;
+    }
   }
 }
 
-.modal__link-icon {
+.modal__link {
   position: absolute;
   display: flex;
   justify-content: flex-start;
@@ -150,7 +150,7 @@
   margin-bottom: 20px;
   color: $color-uno;
 
-  &--textarea {
+  &-textarea {
     resize: none;
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -173,8 +173,8 @@
     }
   }
 
-  &:hover .modal__label--textarea,
-  &:focus-within .modal__label--textarea {
+  &:hover .modal__label-textarea,
+  &:focus-within .modal__label-textarea {
     border-color: $color-studio;
     cursor: pointer;
   }
@@ -186,7 +186,7 @@
   flex-direction: column;
   align-items: center;
 
-  &--text {
+  &-text {
     position: relative; /* posiciona el pseudo-elemento */
     display: inline flex;
     font-family: 'Roboto', sans-serif;
@@ -222,7 +222,7 @@
   }
 }
 
-.modal__checkbox--active {
+.modal__checkbox-active {
   margin-right: 8px;
   width: 16px;
   height: 15px;
@@ -237,14 +237,14 @@
   left: 0; /* Alineación horizontal izquierda - checkbox */
   opacity: 0; /* Checkbox invisible - interactivo */
 
-  &:checked + .modal__checkbox--text::before {
+  &:checked + .modal__checkbox-text::before {
     background-color: $color-studio;
     border: 1px solid $color-uno;
     border-radius: 2px;
     background-image: url('../images/icons/checked.svg');
   }
 
-  &:focus + .modal__checkbox--text::before {
+  &:focus + .modal__checkbox-text::before {
     border-color: $click-order;
   }
 }
@@ -260,7 +260,7 @@
   overflow: hidden;
 }
 
-.modal__checkbox--button {
+.modal__checkbox-button {
   margin: 14px 163px 50px 165px;
   width: 200px;
   height: 50px;

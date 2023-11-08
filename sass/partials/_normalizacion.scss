@@ -16,19 +16,10 @@ body {
 }
 
 .list {
-  list-style-type: none;
+  list-style: none;
   display: flex;
 }
 
 .link {
   text-decoration: none;
-
-  &:focus-within,
-  &:focus-visible,
-  &:focus,
-  &:active {
-    outline: none;
-    transition: transform 0.25ms $cubic;
-    cursor: pointer;
-  }
 }

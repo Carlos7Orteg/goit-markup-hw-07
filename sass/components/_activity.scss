@@ -21,35 +21,35 @@
     padding-bottom: 55.05px;
     margin: auto;
   }
-
-  &__list {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 30px;
-    justify-content: center;
-    height: 648px;
-    margin: 0;
-    padding: 0;
-    position: relative;
-  }
 }
 
-.activity__card {
+.areadev {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  justify-content: center;
+  height: 648px;
+  margin: 0;
+  padding: 0;
   position: relative;
 
-  &--heading {
-    text-transform: uppercase;
-    position: absolute;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.172;
-    letter-spacing: 0.03em;
-    color: $color-tres;
-    bottom: -11px;
-    background-color: $color-background-card;
-    padding: 27px;
-    width: 316px;
+  &__card {
+    position: relative;
+
+    &-heading {
+      text-transform: uppercase;
+      position: absolute;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.172;
+      letter-spacing: 0.03em;
+      color: $color-tres;
+      bottom: -11px;
+      background-color: $color-background-card;
+      padding: 27px;
+      width: 316px;
+    }
   }
 }

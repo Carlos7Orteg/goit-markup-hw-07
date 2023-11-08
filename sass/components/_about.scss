@@ -1,41 +1,50 @@
 /* --About-- */
-.develop {
+.about {
   padding: 0px;
   padding-top: 95px;
   margin-left: 50px;
   column-gap: 30px;
+}
 
-  &__title {
-    font-size: 14px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: $color-dos;
-    margin: 0 auto;
+.solutions {
+  height: 272px;
+  margin-top: 775px;
+  margin-left: 205px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  position: relative;
+  left: -40px;
+
+  & > &__dev {
+    flex-basis: calc((100% - 3 * 30px) / 4);
   }
 
-  &__block {
-    height: 272px;
-    margin-top: 775px;
-    margin-left: 205px;
-    display: flex;
-    margin: auto;
-    justify-content: space-between;
-    position: relative;
-    left: -40px;
+  &__dev {
+    width: 270px;
+    padding: 0;
 
-    > .develop__item {
-      flex-basis: calc((100% - 3 * 30px) / 4);
+    &-title {
+      font-size: 14px;
+      line-height: 1.17;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: $color-dos;
+      margin: 0 auto;
+    }
+
+    &-text {
+      font-size: 14px;
+      line-height: 1.71;
+      letter-spacing: 0.03em;
+      color: $color-uno;
+      width: 270px;
+      margin: auto;
     }
   }
 }
 
-.develop__item {
-  width: 270px;
-  padding: 0;
-}
-
-.develop__links {
+.solutions__dev-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,16 +54,7 @@
   margin-bottom: 30px;
 }
 
-.develop__icons {
+.solutions__dev-links {
   width: 70px;
   height: 70px;
-}
-
-.develop__text {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: $color-uno;
-  width: 270px;
-  margin: auto;
 }
