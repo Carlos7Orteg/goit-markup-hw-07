@@ -99,12 +99,12 @@ La estructura de archivos y carpetas del proyecto sigue una jerarquía organizad
     - En la raíz del proyecto, hay una carpeta **SASS**, que contiene todas las hojas de estilo del
       preprocesador.
     - En la carpeta **SASS** hay archivo main.scss - el archivo principal en el que se organizan e importan todos
-      los componentes en archivos separados en sass/components/, `partials, archivos \_nombre.scss`.
+      los componentes en archivos separados en sass/components/ (partials, archivos \_nombre.scss).
     - La paleta de colores de diseño y los conjuntos de fuentes se presentan como variables en el
       archivo variables.scss, en la carpeta sass/utils. Se pueden utilizar variables CSS o **SASS**
       (opcionalmente).
     - Para cada componente, se crea una hoja de estilo de fragmentos separada en la carpeta
-      sass/components. Por ejemplo `\_page-header.scss`, `\_logo.scss` y etc.
+      sass/components. Por ejemplo \_page-header.scss, \_logo.scss y etc.
     - En los archivos index.html y portfolio.html hay un archivo de estilo minificado enlazado
       main.min.css de la carpeta css.
 
@@ -113,20 +113,20 @@ La estructura de archivos y carpetas del proyecto sigue una jerarquía organizad
     - Nomenclatura adecuada de clases de bloques según la metodología **BEM**.
     - Nomenclatura adecuada de clases de elementos según la metodología **BEM**.
     - Nomenclatura adecuada de clases de modificadores según la metodología **BEM**.
-    - Nomenclatura adecuada de clases 'mixin' según metodología **BEM**.
+    - Nomenclatura adecuada de clases mixin según metodología **BEM**.
     - Los nombres de las clases de **BEM** son claros y descriptivos, todos son en inglés.
 
   #### Diseño
 
     - Se utiliza el selector de anidamiento.
     - La anidación máxima de los selectores es de 2 niveles.
-    - El operador de concatenación `&` e usa para describir pseudo-clases y pseudo-elementos.
+    - El operador de concatenación (&) e usa para describir pseudo-clases y pseudo-elementos.
 
     ---
 
 ## Despliegue
 
-La página está optimizada y lista para su despliegue, con un archivo CSS minificado `main.min.css` enlazado en las páginas HTML del proyecto. Este proyecto está preparado para ejecutarse en entornos de producción.
+La página está optimizada y lista para su despliegue, con un archivo CSS minificado (main.min.css) enlazado en las páginas HTML del proyecto. Este proyecto está preparado para ejecutarse en entornos de producción.
 
 ---
 
